@@ -21,7 +21,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ secrets.S3_REGION || 'auto' }}
       run: |
-        aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/test1 \
+        aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/zsvstudio \
           --endpoint-url ${{ secrets.S3_ENDPOINT_URL }} \
           --delete \
           --exclude ".git/*" \
